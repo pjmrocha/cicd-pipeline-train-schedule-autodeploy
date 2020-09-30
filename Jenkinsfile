@@ -76,8 +76,7 @@ pipeline {
             environment { 
                 CANARY_REPLICAS = 0
             }
-            steps {
-                input 'Deploy to Production?'
+            steps {                
                 milestone(1)
                 kubernetesDeploy(
                     kubeconfigId: 'kubeconfig',
